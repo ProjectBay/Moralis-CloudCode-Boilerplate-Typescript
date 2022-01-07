@@ -1,0 +1,26 @@
+{
+  "name": "moralis_cloud_clode_boilerplate",
+  "version": "1.0.0",
+  "description": "Moralis Cloud Code Boilerplate",
+  "scripts": {
+    "build": "npx webpack",
+    "webpack-watch": "npx webpack -w",
+    "watch-logs": "moralis-admin-cli get-logs --moralisApiKey <insertApiKey> --moralisApiSecret <insertSecret>",
+    "cloud-upload": "moralis-admin-cli watch-cloud-folder --moralisApiKey <insertApiKey> --moralisApiSecret <insertSecret> --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/"
+  },
+  "author": "daniel@berdanex.net",
+  "license": "MIT",
+  "dependencies": {
+    "moralis": "0.0.183"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "browser": {
+    "crypto": false
+  }
+}
