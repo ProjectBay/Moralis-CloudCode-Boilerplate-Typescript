@@ -12,9 +12,13 @@
 
     Create a .env file in root with these properties:
     
-    `MORALIS_CLI_SECRET=<insertSecret>`
+    `MORALIS_CLI_SECRET_PROD=<insertProdSecret>`
     
-    `MORALIS_CLI_KEY=<insertApiKey>`
+    `MORALIS_CLI_KEY_PROD=<insertProdApiKey>`
+
+    `MORALIS_CLI_SECRET_DEV=<insertDevSecret>`
+    
+    `MORALIS_CLI_KEY_DEV=<insertDevApiKey>`
 
 2. Usage
 
