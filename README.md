@@ -8,11 +8,17 @@
     `npm install moralis-admin-cli -g`
 
     `npm install`
+2. Env
 
-2. Further
+    Create a .env file in root with these properties:
+    
+    `MORALIS_CLI_SECRET=<insertSecret>`
+    
+    `MORALIS_CLI_KEY=<insertApiKey>`
+
+2. Usage
 
   
-
 Code & Typescript files located in /src/
 Webpack is used for building a single .js file into /dist/ which will be uploaded to moralis cloud code server.
 

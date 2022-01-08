@@ -1,0 +1,1 @@
+declare const { Moralis }: typeof import('moralis');

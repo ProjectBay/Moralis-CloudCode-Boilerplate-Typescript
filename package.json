@@ -5,8 +5,8 @@
   "scripts": {
     "build": "npx webpack",
     "webpack-watch": "npx webpack -w",
-    "watch-logs": "moralis-admin-cli get-logs --moralisApiKey <insertApiKey> --moralisApiSecret <insertSecret>",
-    "cloud-upload": "moralis-admin-cli watch-cloud-folder --moralisApiKey <insertApiKey> --moralisApiSecret <insertSecret> --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/"
+    "watch-logs": "npx moralis-admin-cli get-logs --moralisApiKey $(grep MORALIS_CLI_KEY  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET  .env | cut -d '=' -f2)",
+    "cloud-upload": "npx moralis-admin-cli watch-cloud-folder --moralisApiKey $(grep MORALIS_CLI_KEY  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET  .env | cut -d '=' -f2) --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/"
   },
   "author": "daniel@berdanex.net",
   "license": "MIT",
