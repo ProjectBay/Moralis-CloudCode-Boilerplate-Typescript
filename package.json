@@ -5,8 +5,10 @@
   "scripts": {
     "build": "npx webpack",
     "webpack-watch": "npx webpack -w",
-    "watch-logs": "npx moralis-admin-cli get-logs --moralisApiKey $(grep MORALIS_CLI_KEY  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET  .env | cut -d '=' -f2)",
-    "cloud-upload": "npx moralis-admin-cli watch-cloud-folder --moralisApiKey $(grep MORALIS_CLI_KEY  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET  .env | cut -d '=' -f2) --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/"
+    "dev:watch-logs": "npx moralis-admin-cli get-logs --moralisApiKey $(grep MORALIS_CLI_KEY_DEV  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET_DEV  .env | cut -d '=' -f2)",
+    "dev:cloud-upload": "npx moralis-admin-cli watch-cloud-folder --moralisApiKey $(grep MORALIS_CLI_KEY_DEV  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET_DEV  .env | cut -d '=' -f2) --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/",
+    "prod:watch-logs": "npx moralis-admin-cli get-logs --moralisApiKey $(grep MORALIS_CLI_KEY_PROD  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET_PROD  .env | cut -d '=' -f2)",
+    "prod:cloud-upload": "npx moralis-admin-cli watch-cloud-folder --moralisApiKey $(grep MORALIS_CLI_KEY_PROD  .env | cut -d '=' -f2) --moralisApiSecret $(grep MORALIS_CLI_SECRET_PROD  .env | cut -d '=' -f2) --moralisSubdomain subdomain.moralis.io --autoSave 1 --moralisCloudfolder ./dist/"
   },
   "author": "daniel@berdanex.net",
   "license": "MIT",
